@@ -1,0 +1,65 @@
+#logo , .centered-top-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 60%
+}
+
+.centered-top-image {
+  width: auto;
+  height: auto
+}
+
+.button.button-calm, .button.button-calm:hover{
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc
+}
+
+.pane, .view {
+  background-color: #231D1D
+}
+
+.item-content {
+  background-color: #ededeb
+}
+
+.depdesc {
+  background-color: rgba(81, 75, 75, 0.8)
+}
+
+.stats {
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.stats ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 3rem;
+  color: white
+}
+
+.stats ul {
+  background-color: rgba(39, 35, 35, 0.6);
+  padding-bottom: 1rem;
+  padding-top: 1rem
+}
+
+.stats ul li span {
+  font-style: italic
+}
+
+.depdesc h2, h3 {
+  color: #fff;
+  text-align: center
+}
+
+.email-link {
+  color: #FDCA01;
+  display: block;
+  text-align: center
+}

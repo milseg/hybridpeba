@@ -1,0 +1,11 @@
+<ion-view view-title="Buscar deputado" name="login-view" hide-nav-bar="true" drag-content="false">
+  <ion-content class="padding" scroll="false">
+      <img src="/assets/peba_logo.png" alt="Peba logo" id="logo"/>
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="nome, partido, estado, fornecedor, CPF, CNPJ..." ng-model="search">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="dig(search)">Cavar</button>
+  </ion-content>
+</ion-view>

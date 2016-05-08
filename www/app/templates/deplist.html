@@ -1,0 +1,13 @@
+<ion-view view-title="Deputados encontrados" name="login-view" hide-nav-bar="false" drag-content="false">
+  <ion-content class="padding">
+      <ion-list>
+        <ion-item class="item-thumbnail-left" href="#" ng-repeat="dep in deputados" ng-click="info(dep)">
+          <img ng-src="{{dep.url_foto}}">
+          <h2>{{dep.nome}}</h2>
+          <p>{{dep.partido}} - {{dep.uf}}</p>
+          <p ng-if="dep.total_votos">{{dep.total_votos}} votos</p>
+          <p>Despesas: {{dep.total_despesas}}</p>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

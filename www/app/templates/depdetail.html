@@ -1,0 +1,25 @@
+<ion-view view-title="Dados do Deputado" name="login-view" hide-nav-bar="false" drag-content="false">
+  <ion-content class="depdesc">
+    <img ng-src="{{deputado.url_foto}}" class="centered-top-image">
+    <h2>{{deputado.nome}} </h2>
+    <h3>{{deputado.partido}}, {{deputado.uf}}</h3>
+    <p><a href="" class="email-link" ng-href="mailto:{{deputado.email}}">{{deputado.email}}</a></p>
+    <div class="stats">
+      <ul>
+        <li>
+        <p>{{deputado.total_despesas}}</p>
+        <span>gastos</span>
+        </li>
+        <li>
+          <p>{{deputado.total_votos}}</p>
+          <span>Votos</span>
+        </li>
+        <li>
+          <p>{{deputado.porcentagem_votos}}%</p>
+          <span>Votos Válidos</span>
+        </li>
+      </ul>
+    </div>
+    <h3 style="text-align: left; margin-left: 1rem">Despesas</h3>
+  </ion-content>
+</ion-view>
