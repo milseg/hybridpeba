@@ -27,5 +27,5 @@ Este iniciará o navegador padrão automaticamente e executará o aplicativo.
 ### Dispositivo ###
 Substitua "[plataforma]" por "ios" ou "android":
 
-    $ ionic platform add [platforma]
+    $ ionic platform add [plataforma]
     $ ionic run [plataforma]
