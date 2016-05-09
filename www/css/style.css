@@ -25,6 +25,7 @@
   background-color: #ededeb
 }
 
+/* dep detail */
 .depdesc {
   background-color: rgba(81, 75, 75, 0.8)
 }
@@ -62,4 +63,47 @@
   color: #FDCA01;
   display: block;
   text-align: center
+}
+
+.text-center {
+  text-align: center
+}
+
+.glyphicon {
+  position: relative;
+  top: 3px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  color: #FDCA01;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased
+}
+
+.glyphicon-evelope:before {
+  content: "\2709"
+}
+
+.expenses-title {
+  text-align: center;
+  background-color: #dddddd;
+  color: #333333;
+  margin-top: 0;
+  padding-top: 1rem;
+  padding-bottom:0.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #eeeeee;
+  font-size: 1.2rem
+}
+
+.table-head  ul{
+  background-color: #dddddd;
+  text-align: left
+}
+
+.table-row ul {
+  background-color: #cccccc
 }

@@ -3,23 +3,44 @@
     <img ng-src="{{deputado.url_foto}}" class="centered-top-image">
     <h2>{{deputado.nome}} </h2>
     <h3>{{deputado.partido}}, {{deputado.uf}}</h3>
-    <p><a href="" class="email-link" ng-href="mailto:{{deputado.email}}">{{deputado.email}}</a></p>
+    <p><a href="" class="email-link" ng-href="mailto:{{deputado.email}}"><span class="glyphicon glyphicon-evelope text-center" aria-hidden="true"></span>{{deputado.email}}</a></p>
     <div class="stats">
       <ul>
         <li>
-        <p>{{deputado.total_despesas}}</p>
-        <span>gastos</span>
+          <p ng-if="!deputado.total_despesas">(Indisponível)</p>
+          <p ng-if="deputado.total_despesas">{{deputado.total_despesas}}</p>
+          <span>GASTOS</span>
         </li>
         <li>
-          <p>{{deputado.total_votos}}</p>
-          <span>Votos</span>
+          <p ng-if="!deputado.total_votos">(Indisponível)</p>
+          <p ng-if="deputado.total_votos">{{deputado.total_votos}}</p>
+          <span>VOTOS</span>
         </li>
         <li>
-          <p>{{deputado.porcentagem_votos}}%</p>
-          <span>Votos Válidos</span>
+          <p ng-if="!deputado.porcentagem_votos">(Indisponível)</p>
+          <p ng-if="deputado.porcentagem_votos">{{deputado.porcentagem_votos}}%</p>
+          <span>VOTOS VÁLIDOS</span>
         </li>
       </ul>
     </div>
-    <h3 style="text-align: left; margin-left: 1rem">Despesas</h3>
+    <h3 class="expenses-title">DESPESAS</h3>
+    <div class="expenses table" ion-table>
+      <ion-list>
+        <ion-item class="table-head table-row">
+          <ul>
+            <li><b>Tipo</b></li>
+            <li><b>Valor Líquido</b></li>
+            <li><b>Valor Total</b></li>
+          </ul>
+        </ion-item>
+        <ion-item class="table-row" ng-repeat="gasto in deputado.gastos">
+          <ul>
+            <li>{{gasto.tipo}}</li>
+            <li>{{gasto.total_liquido}}</li>
+            <li>{{gasto.total}}</li>
+          </ul>
+        </ion-item>
+      </ion-list>
+    </div>
   </ion-content>
 </ion-view>
