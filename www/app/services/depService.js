@@ -8,9 +8,10 @@ define([
     'webService',
     '$q',
     function (webService, $q) {
-      this.loadDeps = function (query) {
+      this.loadDeps = function (query, page) {
         var deffer = $q.defer();
-        webService.getList(query).then(function (response) {
+        //console.log("loadDeps", query, page);
+        webService.getList(query, page).then(function (response) {
           deffer.resolve(response.data);
         }, function (err) {
           deffer.reject(err);

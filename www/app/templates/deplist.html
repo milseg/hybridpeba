@@ -1,7 +1,7 @@
-<ion-view view-title="Deputados encontrados" name="login-view" hide-nav-bar="false" drag-content="false">
-  <ion-content class="padding">
+<ion-view view-title="Deputados encontrados" name="deplist-view" hide-nav-bar="false" drag-content="false">
+  <ion-content class="padding" ion-sticky ion-sticky-class="positive" scroll="true" has-bouncing="true" lazy-scroll>
       <ion-list>
-        <ion-item class="item-thumbnail-left" href="#" ng-repeat="dep in deputados" ng-click="info(dep)">
+        <ion-item class="item-thumbnail-left" href="#" collection-repeat="dep in deputados" ng-click="info(dep)">
           <img ng-src="{{dep.url_foto}}">
           <h2>{{dep.nome}}</h2>
           <p>{{dep.partido}} - {{dep.uf}}</p>
@@ -9,5 +9,11 @@
           <p>Despesas: {{dep.total_despesas}}</p>
         </ion-item>
       </ion-list>
+      <ion-infinite-scroll
+        ng-if="hasMoreDeps()"
+        on-infinite="loadMore()"
+        distance="80%"
+        immediate-check>
+      </ion-infinite-scroll>
   </ion-content>
 </ion-view>
